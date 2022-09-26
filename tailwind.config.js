@@ -1,20 +1,21 @@
 module.exports = {
-  content: ['index.html'],
+  content: ["index.html"],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
-      padding: '16px',
+      padding: "16px",
     },
     extend: {
       colors: {
-        primary: '#0ea5e9',
-        secondary: '#64748b',
-        dark: '#0f172a',
+        primary: "#0ea5e9",
+        secondary: "#64748b",
+        dark: "#0f172a",
       },
       screen: {
-        '2xl': '1320px',
-      }
+        "2xl": "1320px",
+      },
     },
   },
   plugins: [],
-}
+};
