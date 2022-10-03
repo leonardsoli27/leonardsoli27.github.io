@@ -1,2 +1,2 @@
 # Portfolio-Tailwind
-https://leonardsoli27.github.io/portfolio/
+https://leonardsoli27.github.io/
