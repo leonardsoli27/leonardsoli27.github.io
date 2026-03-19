@@ -5,6 +5,12 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link href="dist/css/final.css" rel="stylesheet" />
   <link rel="shortcut icon" href="dist/img/icon/icons.png" type="image/x-icon" />
   <link rel="icon" href="dist/img/icon/icons.png" type="image/x-icon" />
@@ -24,11 +30,11 @@
 
 <body>
   <!-- Header Start-->
-  <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+  <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent transition-all duration-300">
     <div class="container">
       <div class="relative flex items-center justify-between">
         <div class="px-4">
-          <a href="#home" class="block py-6 text-lg font-bold text-primary">BlackScreen</a>
+          <a href="#home" class="block py-6 text-xl lg:text-2xl font-extrabold tracking-tighter text-[#1f2937] dark:text-white">Leonard</a>
         </div>
         <div class="flex items-center px-4">
           <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
@@ -39,46 +45,32 @@
 
           <nav id="nav-menu"
             class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
-            <ul class="block lg:flex">
-              <li class="group">
+            <ul class="block lg:flex lg:items-center lg:gap-10">
+              <li class="group mt-4 lg:mt-0">
                 <a href="#home"
-                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Beranda</a>
+                  class="nav-link nav-active flex py-2 text-sm lg:text-base transition-colors">Home</a>
               </li>
-              <li class="group">
-                <a href="#about"
-                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Tentang Saya</a>
+              <li class="group mt-4 lg:mt-0">
+                <a href="#experience"
+                  class="nav-link nav-inactive flex py-2 text-sm lg:text-base transition-colors">Experience</a>
               </li>
-              <li class="group">
+              <li class="group mt-4 lg:mt-0">
+                <a href="#skills"
+                  class="nav-link nav-inactive flex py-2 text-sm lg:text-base transition-colors">Skills</a>
+              </li>
+              <li class="group mt-4 lg:mt-0">
                 <a href="#portfolio"
-                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
+                  class="nav-link nav-inactive flex py-2 text-sm lg:text-base transition-colors">Works</a>
               </li>
-              <li class="group">
-                <a href="#academic"
-                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Pendidikan</a>
-              </li>
-              <!-- <li class="group">
-                  <a
-                    href="#blog"
-                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
-                    >Blog</a
-                  >
-                </li> -->
-              <li class="group">
+               <li class="group mt-4 lg:mt-0 mb-4 lg:mb-0">
                 <a href="#kontak"
-                  class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Kontak</a>
+                  class="nav-link nav-inactive flex py-2 text-sm lg:text-base transition-colors">Contact</a>
               </li>
               <li class="mt-2 flex items-center pl-8 lg:mt-0">
-                <div class="flex">
-                  <span class="mr-2 text-sm text-slate-500">light</span>
-                  <input type="checkbox" class="hidden" id="dark-toggle" />
-                  <label for="dark-toggle">
-                    <div class="flext h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
-                      <div class="toggle-circle h-3 w-4 rounded-full bg-white transition duration-300 ease-in-out">
-                      </div>
-                    </div>
-                  </label>
-                  <span class="ml-2 text-sm text-slate-500">dark</span>
-                </div>
+                <button id="theme-toggle" type="button" class="flex items-center justify-center h-10 w-10 border border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:bg-primary hover:text-white hover:border-primary hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 rounded-xl text-sm transition-all duration-300">
+                  <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                  <svg id="theme-toggle-light-icon" class="hidden w-5 h-5 transition-transform duration-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
               </li>
             </ul>
           </nav>
@@ -89,74 +81,31 @@
   <!-- Header End -->
 
   <!-- Hero Section Start -->
-  <section id="home" class="pt-36 dark:bg-dark md:pt-20">
-    <div class="container">
-      <div class="flex flex-wrap">
-        <div class="w-full self-center px-4 lg:w-1/2">
-          <h1 class="text-base font-semibold text-primary md:text-xl">
-            Hallo Semua, saya
-            <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Leonard Onnanda
-              Soli</span>
+  <section id="home" class="pt-36 pb-32 bg-white dark:bg-[#0f172a] md:pt-40 lg:min-h-screen flex items-center">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap items-center">
+        <!-- Hero Text -->
+        <div class="w-full px-4 lg:w-1/2 flex flex-col justify-center order-2 lg:order-1 mt-12 lg:mt-0">
+          <h1 class="text-6xl md:text-7xl lg:text-[80px] font-extrabold text-[#1f2937] dark:text-white tracking-tighter leading-[1.1] mb-2">
+            Hi,
           </h1>
-          <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
-            Web Developer |
-            <span class="text-dark dark:text-white">Software Engineer</span>
-          </h2>
-          <p class="mb-10 font-medium leading-relaxed text-secondary">
-            <i>Corpus Meum Mortale Sed Anima Mea Immortalis Est!</i>
-          </p>
+          <h1 class="text-6xl md:text-7xl lg:text-[80px] font-extrabold text-[#1f2937] dark:text-white tracking-tighter leading-[1.1] mb-2">
+            I'm <span class="text-[#3b82f6]">Leonard</span>
+          </h1>
+          <h1 class="text-6xl md:text-7xl lg:text-[80px] font-extrabold text-[#1f2937] dark:text-white tracking-tighter leading-[1.1] mb-10">
+            Web Developer
+          </h1>
 
-          <a href="#kontak"
-            class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi
-            Saya</a>
-        </div>
-
-        <div class="w-full self-end px-5 lg:w-1/2">
-          <div class="relative mt-20 lg:right-0 lg:mt-9">
-            <img src="dist/img/profil.png" alt="Leonard Soli" class="relative z-10 mx-auto max-w-full" />
-            <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
-              <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#0ea5e9"
-                  d="M55.1,-22.4C60.6,-0.9,46.8,22.3,25.9,38.1C5,53.8,-23.1,62.2,-41.5,50.4C-60,38.6,-68.7,6.7,-60.2,-18.9C-51.6,-44.6,-25.8,-63.9,-0.5,-63.8C24.8,-63.6,49.6,-43.9,55.1,-22.4Z"
-                  transform="translate(100 100) scale(1.2)" />
-              </svg>
-            </span>
+          <div>
+            <a href="#kontak"
+              class="inline-block rounded-lg bg-[#3b82f6] py-3.5 px-10 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-500/40">Contact</a>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Hero Section End -->
 
-  <!-- About Section Start -->
-  <section id="about" class="pt-36 pb-32 dark:bg-dark">
-    <div class="container">
-      <div class="flex flex-wrap">
-        <div class="mb-10 w-full px-4 lg:w-1/2">
-          <h4 class="mb-3 text-lg font-bold uppercase text-primary">
-            Tentang Saya
-          </h4>
-          <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">
-            Yuk Kenalan Lebih Dalam
-          </h2>
-          <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
-            Lebih senang mencari inovasi dan hal-hal baru serta terbuka dengan
-            segala saran dan masukkan.
-          </p>
-        </div>
-        <div class="w-full px-4 lg:w-1/2">
-          <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">
-            Mari Berteman
-          </h3>
-          <p class="mb-6 text-base font-medium text-secondary">
-            Ingin lebih mengenal serta berteman dapat menghubungi saya melalui
-            <br />
-            media-media sosial dibawah ini.
-          </p>
-          <div class="flex items-center">
+          <!-- Minimal Social Icons -->
+          <div class="mt-24 lg:mt-32 flex items-center gap-4">
             <!-- github -->
             <a href="https://github.com/leonardsoli27" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              class="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-black hover:bg-black hover:text-white hover:shadow-lg dark:hover:border-white dark:hover:bg-white dark:hover:text-black">
               <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
                 <title>Git</title>
                 <path
@@ -165,7 +114,7 @@
             </a>
             <!-- discord -->
             <a href="" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              class="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-[#5865F2] hover:bg-[#5865F2] hover:text-white hover:shadow-lg hover:shadow-[#5865F2]/30">
               <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
                 <title>Discord</title>
                 <path
@@ -174,7 +123,7 @@
             </a>
             <!-- instagram -->
             <a href="https://www.instagram.com/leonard_soli/" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              class="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-[#E1306C] hover:bg-gradient-to-tr hover:from-[#F56040] hover:to-[#C13584] hover:text-white hover:shadow-lg hover:shadow-[#E1306C]/30">
               <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
                 <title>Instagram</title>
                 <path
@@ -183,7 +132,7 @@
             </a>
             <!-- twitter -->
             <a href="" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              class="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white hover:shadow-lg hover:shadow-[#1DA1F2]/30">
               <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
                 <title>Twitter</title>
                 <path
@@ -192,7 +141,7 @@
             </a>
             <!-- linkedIn -->
             <a href="https://www.linkedin.com/in/leonardsoli27" target="_blank"
-              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+              class="flex h-11 w-11 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white hover:shadow-lg hover:shadow-[#0A66C2]/30">
               <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
                 <title>LinkedIn</title>
                 <path
@@ -201,239 +150,475 @@
             </a>
           </div>
         </div>
+
+        <!-- Hero Image Context -->
+        <div class="w-full px-5 lg:w-1/2 order-1 lg:order-2">
+          <div class="relative flex justify-center items-center h-[400px] md:h-[500px] lg:h-[650px] overflow-visible">
+            
+            <!-- Animated Balls Background Pattern -->
+            <div class="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[450px] lg:h-[450px] z-0">
+              <!-- Bola 1 (Primary Blue) -->
+              <div class="absolute top-0 -left-4 w-56 h-56 sm:w-72 sm:h-72 bg-blue-500 rounded-full opacity-60 dark:opacity-40 animate-blob filter blur-3xl"></div>
+              <!-- Bola 2 (Darker Blue) -->
+              <div class="absolute top-0 -right-4 w-56 h-56 sm:w-72 sm:h-72 bg-blue-800 rounded-full opacity-60 dark:opacity-40 animate-blob [animation-delay:2s] filter blur-3xl"></div>
+              <!-- Bola 3 (Lighter Blue) -->
+              <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-56 h-56 sm:w-72 sm:h-72 bg-blue-400 rounded-full opacity-60 dark:opacity-40 animate-blob [animation-delay:4s] filter blur-3xl"></div>
+            </div>
+            
+            <!-- Lottie Animation -->
+            <div id="lottie-profile" class="relative z-10 mx-auto w-full max-w-[300px] md:max-w-[400px] lg:max-w-[500px] drop-shadow-2xl"></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <!-- About Section End -->
+  <!-- Hero Section End -->
 
-  <!-- Porfolio Section Start -->
-  <section id="portfolio" class="bg-slate-100 pt-36 pb-16 dark:bg-slate-800">
+  <!-- Experience Section Start -->
+  <section id="experience" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-800">
+    <div class="container">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-16 text-center">
+          <h4 class="section-subtitle">Experience</h4>
+          <h2 class="section-title text-3xl sm:text-4xl lg:text-5xl">Professional History</h2>
+          <p class="text-md font-medium text-secondary md:text-lg mb-12 max-w-2xl mx-auto">
+            My professional journey in developing institutional-scale information systems and data-driven software solutions.
+          </p>
+          
+          <!-- 2-Column Height-Efficient Grid Container -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-12 max-w-7xl mx-auto px-4 text-left">
+            
+            <!-- Job 1: Ministry of Social Affairs -->
+            <div class="relative pl-8 border-l-2 border-primary/20">
+              <!-- Timeline Dot -->
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-7 border-4 border-white dark:border-dark shadow-sm z-10"></div>
+              
+              <!-- Accordion Card -->
+              <div class="group border border-slate-200 dark:border-slate-700 rounded-3xl bg-white dark:bg-slate-800 shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/30">
+                <button onclick="toggleExperience('exp1')" class="w-full flex items-center justify-between p-6 text-left focus:outline-none hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                  <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-2">
+                      <span class="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-widest">Apr 2023 - Present</span>
+                      <div class="h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark dark:text-white leading-tight">Software Developer Specialist</h3>
+                    <p class="text-sm font-semibold text-secondary dark:text-slate-400 mt-1">Ministry of Social Affairs, Republic of Indonesia</p>
+                  </div>
+                  <div id="icon-exp1" class="ml-3 transform transition-transform duration-500 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </button>
+                <div id="content-exp1" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/30 dark:bg-slate-900/30">
+                  <div class="p-6 pt-4 border-t border-slate-100 dark:border-slate-700/50">
+                    <ul class="space-y-3">
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Developed the <span class="font-bold text-primary">Sekolah Rakyat</span> (SIAKAD) platform and student reporting system, serving 15,014 students and 2,415 teachers.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Implemented a <span class="font-bold text-primary">Virtual Account-based</span> refund system integrated with SIKSMA for the Elder Nutrition Program.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Engineered web applications using <span class="font-bold text-primary">C#</span> and the <span class="font-bold text-primary">Blazor Framework</span>, adhering to institutional software standards.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Developed the <span class="font-bold text-primary">SIM UGB PUB</span> system using .NET for licensing, non-tax revenue (PNBP) payments, and lucky draw reporting.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Integrated <span class="font-bold text-primary">Electronic Signature (TTE)</span> for secure data authentication and the digitalization of public services.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Optimized application performance, resolved critical bugs, and implemented secure authentication and authorization mechanisms.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Job 2: IMAVI -->
+            <div class="relative pl-8 border-l-2 border-primary/20">
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-7 border-4 border-white dark:border-dark shadow-sm z-10"></div>
+              
+              <div class="group border border-slate-200 dark:border-slate-700 rounded-3xl bg-white dark:bg-slate-800 shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/30">
+                <button onclick="toggleExperience('exp2')" class="w-full flex items-center justify-between p-6 text-left focus:outline-none hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                  <div class="flex-1">
+                    <div class="mb-2">
+                       <span class="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-widest">Mar 2022 - Mar 2023</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark dark:text-white leading-tight">Software Developer</h3>
+                    <p class="text-sm font-semibold text-secondary dark:text-slate-400 mt-1">Ioannis Mariae Vianney Theological Institute (IMAVI)</p>
+                  </div>
+                  <div id="icon-exp2" class="ml-3 transform transition-transform duration-500 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </button>
+                <div id="content-exp2" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/30 dark:bg-slate-900/30">
+                  <div class="p-6 pt-4 border-t border-slate-100 dark:border-slate-700/50">
+                    <ul class="space-y-3">
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Developed and maintained <span class="font-bold text-primary">LMS</span> and <span class="font-bold text-primary">SIAKAD</span> applications to streamline academic operations.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Built internal web applications using <span class="font-bold text-primary">MeteorJS</span> and <span class="font-bold text-primary">MongoDB</span> tailored to institutional requirements.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Enhanced system stability and reliability through code optimization and the application of development best practices.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Collaborated with QA teams to identify and resolve bugs and system performance bottlenecks.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Implemented new features and performed routine maintenance to ensure system sustainability.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Job 3: Agricultural Quarantine -->
+            <div class="relative pl-8 border-l-2 border-primary/20">
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-7 border-4 border-white dark:border-dark shadow-sm z-10"></div>
+              
+              <div class="group border border-slate-200 dark:border-slate-700 rounded-3xl bg-white dark:bg-slate-800 shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/30">
+                <button onclick="toggleExperience('exp3')" class="w-full flex items-center justify-between p-6 text-left focus:outline-none hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                  <div class="flex-1">
+                    <div class="mb-2">
+                       <span class="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-widest">Sep 2021 - Nov 2021</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark dark:text-white leading-tight">Freelance Software Developer</h3>
+                    <p class="text-sm font-semibold text-secondary dark:text-slate-400 mt-1">Class II Agricultural Quarantine Center - Ternate</p>
+                  </div>
+                  <div id="icon-exp3" class="ml-3 transform transition-transform duration-500 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </button>
+                <div id="content-exp3" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/30 dark:bg-slate-900/30">
+                  <div class="p-6 pt-4 border-t border-slate-100 dark:border-slate-700/50">
+                    <ul class="space-y-3">
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Architected a monitoring application for agricultural commodity traffic, including specialized data modeling and end-to-end processing pipelines.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Implemented a commodity data management architecture with regional classification to ensure data consistency and support analytics.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Developed an automated, print-ready reporting module to streamline operational reporting tasks.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Job 4: Oofy Nusantara -->
+            <div class="relative pl-8 border-l-2 border-primary/20">
+              <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-7 border-4 border-white dark:border-dark shadow-sm z-10"></div>
+              
+              <div class="group border border-slate-200 dark:border-slate-700 rounded-3xl bg-white dark:bg-slate-800 shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/30">
+                <button onclick="toggleExperience('exp4')" class="w-full flex items-center justify-between p-6 text-left focus:outline-none hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors">
+                  <div class="flex-1">
+                    <div class="mb-2">
+                       <span class="text-[10px] sm:text-xs font-bold text-primary uppercase tracking-widest">May 2021 - Jun 2021</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark dark:text-white leading-tight">Apprenticeship - Software Developer</h3>
+                    <p class="text-sm font-semibold text-secondary dark:text-slate-400 mt-1">Oofy Nusantara Adidaya</p>
+                  </div>
+                  <div id="icon-exp4" class="ml-3 transform transition-transform duration-500 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-5 h-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>
+                  </div>
+                </button>
+                <div id="content-exp4" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-50/30 dark:bg-slate-900/30">
+                  <div class="p-6 pt-4 border-t border-slate-100 dark:border-slate-700/50">
+                    <ul class="space-y-3">
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Developed a <span class="font-bold text-primary">Sales Management</span> application to support business operations and administrative workflows.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Implemented financial data visualizations (charts/graphs) to facilitate business performance analysis.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Engineered transaction filtering and automated reporting (daily, monthly, annual) to improve financial auditing efficiency.</span>
+                      </li>
+                      <li class="flex items-start text-secondary dark:text-slate-400">
+                        <span class="mr-2 text-primary font-bold">✓</span>
+                        <span class="text-xs sm:text-sm">Contributed to reducing manual data entry errors and improved overall client operational efficiency.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Experience Section End -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="pt-32 pb-32 bg-white dark:bg-[#0f172a]">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12">
+            <div class="mx-auto mb-16 max-w-xl text-center">
+              <h4 class="section-subtitle">Skills & Competencies</h4>
+              <h2 class="section-title">Technical & Soft Skills</h2>
+              <p class="text-md font-medium text-secondary md:text-lg dark:text-slate-400">
+                A combination of technical expertise and interpersonal strengths cultivated through my professional journey.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+          <!-- Hard Skills Card -->
+          <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark dark:text-white mb-4">Hard Skills</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">C# (.NET/Blazor)</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">PHP (Laravel)</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">JavaScript (Node.js)</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">MeteorJS</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">SQL Server</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">MySQL</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">MongoDB</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">Tailwind CSS</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">SASS/SCSS</span>
+              <span class="px-3 py-1 text-xs font-semibold bg-primary/10 text-primary rounded-full border border-primary/20">Linux (Ubuntu)</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills Card -->
+          <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark dark:text-white mb-4">Soft Skills</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center text-sm text-secondary dark:text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2"></span> Problem Solving
+              </li>
+              <li class="flex items-center text-sm text-secondary dark:text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2"></span> Analytical Thinking
+              </li>
+              <li class="flex items-center text-sm text-secondary dark:text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2"></span> Technical Communication
+              </li>
+              <li class="flex items-center text-sm text-secondary dark:text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2"></span> Cross-functional Collaboration
+              </li>
+              <li class="flex items-center text-sm text-secondary dark:text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-purple-500 mr-2"></span> Time Management
+              </li>
+            </ul>
+          </div>
+
+          <!-- Interests Card -->
+          <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-orange-500/10 flex items-center justify-center mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark dark:text-white mb-4">Interests & Exploration</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center text-sm text-secondary dark:text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 mr-2"></span> Open-source Technologies
+              </li>
+              <li class="flex items-center text-sm text-secondary dark:text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 mr-2"></span> Software Architecture
+              </li>
+              <li class="flex items-center text-sm text-secondary dark:text-slate-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-500 mr-2"></span> Technology for Social Impact
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="pt-32 pb-24 bg-slate-100 dark:bg-slate-800">
     <div class="container">
       <div class="w-full px-4">
         <div class="mx-auto mb-16 max-w-xl text-center">
-          <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
-          <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-            Project Terbaru
-          </h2>
+          <h4 class="section-subtitle">Portfolio</h4>
+          <h2 class="section-title">Recent Projects</h2>
           <p class="text-md font-medium text-secondary md:text-lg">
-            Berikut merupakan ragam projek yang selama ini telah saya bangun
-            dan kembangkan
+            A selection of key projects I have designed, engineered, and deployed.
           </p>
         </div>
       </div>
 
       <div class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-11/12">
-        <div class="mb-12 p-4 md:w-1/2">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/p_1.png" alt="1" width="100%" />
+        <div class="mb-12 p-4 md:w-1/2 lg:w-1/3">
+          <div onclick="openProjectModal('keuangan')" class="group relative h-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden cursor-pointer">
+            <div class="relative overflow-hidden aspect-video">
+              <img src="dist/img/portfolio/p_1.png" alt="Aplikasi Manajemen Keuangan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none flex items-center justify-center">
+                <div class="bg-white/20 backdrop-blur-md rounded-full p-4 transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.644C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="mb-3 text-xl font-bold text-dark dark:text-white">
+                Financial Management System
+              </h3>
+              <p class="text-base font-medium text-secondary leading-relaxed line-clamp-3">
+                A web-based application designed for real-time cash flow monitoring and financial tracking at Oofy Corp Surabaya.
+              </p>
+            </div>
           </div>
-          <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">
-            Aplikasi Manajemen Keuangan
-          </h3>
-          <p class="text-base font-medium text-secondary">
-            Aplikasi ini berbasis wesbite, berfungsi sebagai pengontrol dan
-            pencatatan keuangan pada Oofy Corp Surabaya.
-          </p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/p_2.png" alt="1" width="100%" />
+
+        <div class="mb-12 p-4 md:w-1/2 lg:w-1/3">
+          <div onclick="openProjectModal('inventori')" class="group relative h-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden cursor-pointer">
+            <div class="relative overflow-hidden aspect-video">
+              <img src="dist/img/portfolio/p_2.png" alt="Aplikasi Inventori Barang" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none flex items-center justify-center">
+                <div class="bg-white/20 backdrop-blur-md rounded-full p-4 transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.644C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="mb-3 text-xl font-bold text-dark dark:text-white">
+                Inventory Management System
+              </h3>
+              <p class="text-base font-medium text-secondary leading-relaxed line-clamp-3">
+                A comprehensive web application developed to manage asset data and inventory tracking for village-level government operations.
+              </p>
+            </div>
           </div>
-          <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">
-            Aplikasi Inventori Barang
-          </h3>
-          <p class="text-base font-medium text-secondary">
-            Aplikasi ini berbasis web bertujuan sebagai media pendataan barang
-            dan berbagai aset lainnya pada kantor desa Klagen
-          </p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/p_3.png" alt="1" width="100%" />
+
+        <div class="mb-12 p-4 md:w-1/2 lg:w-1/3">
+          <div onclick="openProjectModal('compro')" class="group relative h-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden cursor-pointer">
+            <div class="relative overflow-hidden aspect-video">
+              <img src="dist/img/portfolio/p_3.png" alt="Aplikasi Company Profile" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none flex items-center justify-center">
+                <div class="bg-white/20 backdrop-blur-md rounded-full p-4 transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.644C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="mb-3 text-xl font-bold text-dark dark:text-white">
+                Corporate Profile Website
+              </h3>
+              <p class="text-base font-medium text-secondary leading-relaxed line-clamp-3">
+                A professional corporate profile and digital identity platform engineered to showcase PPSLB2 Surabaya's services and values.
+              </p>
+            </div>
           </div>
-          <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">
-            Aplikasi Company Profile
-          </h3>
-          <p class="text-base font-medium text-secondary">
-            Aplikasi ini menjadi media media profil dan perkenalan yang
-            digunakan untuk memperkenalkan perusahaan PPSLB2 Surabaya.
-          </p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/p_4.png" alt="1" width="100%" />
+
+        <div class="mb-12 p-4 md:w-1/2 lg:w-1/3">
+          <div onclick="openProjectModal('sirute')" class="group relative h-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden cursor-pointer">
+            <div class="relative overflow-hidden aspect-video">
+              <img src="dist/img/portfolio/p_4.png" alt="Aplikasi SIRUTE" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none flex items-center justify-center">
+                <div class="bg-white/20 backdrop-blur-md rounded-full p-4 transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.644C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="mb-3 text-xl font-bold text-dark dark:text-white">
+                Neighborhood Management (SIRUTE)
+              </h3>
+              <p class="text-base font-medium text-secondary leading-relaxed line-clamp-3">
+                A digital resident monitoring system designed to track population movements and activity logs at the neighborhood level.
+              </p>
+            </div>
           </div>
-          <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">
-            Aplikasi SIRUTE
-          </h3>
-          <p class="text-base font-medium text-secondary">
-            Aplikasi ini bertujuan sebagai wadah pendataan arus keluar masuk
-            warga pada lingkup wilayah daerah RT/RW.
-          </p>
         </div>
-        <div class="mb-12 p-4 md:w-1/2">
-          <div class="overflow-hidden rounded-md shadow-md">
-            <img src="dist/img/portfolio/p_5.png" alt="1" width="100%" />
+
+        <div class="mb-12 p-4 md:w-1/2 lg:w-1/3">
+          <div onclick="openProjectModal('lms')" class="group relative h-full rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl hover:shadow-blue-500/20 overflow-hidden cursor-pointer">
+            <div class="relative overflow-hidden aspect-video">
+              <img src="dist/img/portfolio/p_5.png" alt="Aplikasi LMS & SIAKAD" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-600/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none flex items-center justify-center">
+                <div class="bg-white/20 backdrop-blur-md rounded-full p-4 transform scale-50 group-hover:scale-100 transition-transform duration-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-white">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.644C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="mb-3 text-xl font-bold text-dark dark:text-white">
+                LMS & Academic Information System
+              </h3>
+              <p class="text-base font-medium text-secondary leading-relaxed line-clamp-3">
+                An integrated platform combining a Learning Management System and a centralized Academic Information System for private institutions.
+              </p>
+            </div>
           </div>
-          <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">
-            Aplikasi LMS & SIAKAD
-          </h3>
-          <p class="text-base font-medium text-secondary">
-            Aplikasi ini berguna sebagai media
-            <i>Learning Management System</i> dan
-            <i>Sistem Informasi Akademik</i> pada sebuah institut pendidikan.
-          </p>
         </div>
       </div>
     </div>
   </section>
   <!-- Porfolio Section End-->
 
-  <!-- Clients Section Start -->
-  <section id="academic" class="pt-36 pb-32 dark:bg-dark">
-    <div class="container">
-      <div class="w-full px-4">
-        <div class="mx-auto mb-16 text-center">
-          <h4 class="mb-2 text-lg font-semibold text-primary">Pendidikan</h4>
-          <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-            Riwayat Pendidikan
-          </h2>
-          <p class="text-md font-medium text-secondary md:text-lg">
-            --- Pengembangan ---
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Clients Section End -->
 
-  <!-- Blog Section Start -->
-  <!-- <section id="blog" class="bg-slate-100 pt-36 pb-20 dark:bg-dark">
-      <div class="container">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">Blog</h4>
-            <h2
-              class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl"
-            >
-              Blog Programmer
-            </h2>
-            <p class="text-md font-medium text-secondary md:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
-              dicta deleniti iure vero officiis itaque omnis at architecto
-              aliquid minus!
-            </p>
-          </div>
-
-          <div class="flex flex-wrap">
-            <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-              <div
-                class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800 dark:text-white"
-              >
-                <img
-                  src="https://source.unsplash.com/360x200?nodeJs"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="py-8 px-6">
-                  <h3>
-                    <a
-                      href="#"
-                      class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
-                    >
-                      Tips Belajar Programming.
-                    </a>
-                  </h3>
-                  <p class="mb-6 text-base font-medium text-secondary">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Incidunt suscipit nesciunt voluptatum eum.
-                  </p>
-                  <a
-                    href="#"
-                    class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
-                    >Baca Selengkapnya</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-              <div
-                class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
-              >
-                <img
-                  src="https://source.unsplash.com/360x200?laravel"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="py-8 px-6">
-                  <h3>
-                    <a
-                      href="#"
-                      class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
-                    >
-                      Tips Belajar Programming.
-                    </a>
-                  </h3>
-                  <p class="mb-6 text-base font-medium text-secondary">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Incidunt suscipit nesciunt voluptatum eum.
-                  </p>
-                  <a
-                    href="#"
-                    class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
-                    >Baca Selengkapnya</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-              <div
-                class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg dark:bg-slate-800"
-              >
-                <img
-                  src="https://source.unsplash.com/360x200?programming"
-                  alt=""
-                  class="w-full"
-                />
-                <div class="py-8 px-6">
-                  <h3>
-                    <a
-                      href="#"
-                      class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary dark:text-white"
-                    >
-                      Tips Belajar Programming.
-                    </a>
-                  </h3>
-                  <p class="mb-6 text-base font-medium text-secondary">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Incidunt suscipit nesciunt voluptatum eum.
-                  </p>
-                  <a
-                    href="#"
-                    class="rounded-lg bg-primary py-2 px-4 text-sm font-medium text-white hover:opacity-80"
-                    >Baca Selengkapnya</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <!-- Blog Section End -->
 
   <!-- Contact Section Start -->
-  <section id="kontak" class="bg-slate-100 pt-36 pb-32 dark:bg-slate-800">
+  <section id="kontak" class="pt-36 pb-32 bg-white dark:bg-[#0f172a]">
     <div class="container">
       <div class="w-full px-4">
         <div class="mx-auto mb-16 max-w-xl text-center">
-          <h4 class="mb-2 text-lg font-semibold text-primary">Kontak</h4>
-          <h2 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
-            Hubungi Saya
-          </h2>
+          <h4 class="section-subtitle">Contact</h4>
+          <h2 class="section-title">Get In Touch</h2>
           <p class="text-md font-medium text-secondary md:text-lg">
-            Jika ada saran dan masukkan dapat melalui form saran masukkan
-            dibawah ini, Terima kasih!
+            Feel free to reach out with any inquiries, suggestions, or potential collaborations. Thank you!
           </p>
         </div>
       </div>
@@ -441,25 +626,24 @@
       <form action="">
         <div class="w-full lg:mx-auto lg:w-2/3">
           <div class="mb-8 w-full px-4">
-            <label for="name" class="text-base font-bold text-primary">Nama</label>
+            <label for="name" class="text-base font-bold text-primary mb-2 block">Full Name</label>
             <input type="text" id="name"
-              class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+              class="w-full rounded-xl bg-slate-100 p-4 text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300 dark:bg-slate-700 dark:text-white" placeholder="Enter your full name" />
           </div>
           <div class="mb-8 w-full px-4">
-            <label for="email" class="text-base font-bold text-primary">Email</label>
+            <label for="email" class="text-base font-bold text-primary mb-2 block">Email Address</label>
             <input type="email" id="email"
-              class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+              class="w-full rounded-xl bg-slate-100 p-4 text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300 dark:bg-slate-700 dark:text-white" placeholder="name@email.com" />
           </div>
           <div class="mb-8 w-full px-4">
-            <label for="pesan" class="text-base font-bold text-primary">Saran & Masukan</label>
+            <label for="pesan" class="text-base font-bold text-primary mb-2 block">Your Message</label>
             <textarea id="pesan"
-              class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
-              </textarea>
+              class="h-40 w-full rounded-xl bg-slate-100 p-4 text-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition duration-300 dark:bg-slate-700 dark:text-white" placeholder="Write your message here..."></textarea>
           </div>
           <div class="w-full px-4">
             <button
-              class="trasition w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white duration-500 hover:opacity-80 hover:shadow-lg">
-              Hubungi Saya
+              class="w-full rounded-full bg-gradient-to-r from-primary to-cyan-500 py-4 px-8 text-lg font-bold text-white shadow-lg transition duration-300 ease-in-out hover:scale-[1.02] hover:shadow-cyan-500/50 hover:opacity-90">
+              Send Message
             </button>
           </div>
         </div>
@@ -469,61 +653,13 @@
   <!-- Contact Section End -->
 
   <!-- Footer Start -->
-  <footer class="bg-dark pt-24 pb-12">
+  <footer class="bg-dark pt-10 pb-12">
     <div class="container">
-      <div class="flex flex-wrap">
-        <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
-          <h2 class="mb-5 text-4xl font-bold text-white">BlackScreen</h2>
-          <h3 class="mb-2 text-2xl font-bold">Hubungi Saya</h3>
-          <p>leonard.soli27@gmail.com</p>
-          <p>Jl. Dukuh Kupang 14 No.26</p>
-          <p>Surabaya</p>
-        </div>
-        <div class="mb-12 w-full px-4 md:w-1/3">
-          <h3 class="mb-5 text-xl font-semibold text-white">Kategori Blog</h3>
-          <ul class="text-slate-300">
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary">Programming</a>
-            </li>
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary">Hacking</a>
-            </li>
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary">Lain-lain</a>
-            </li>
-          </ul>
-        </div>
-        <div class="mb-12 w-full px-4 md:w-1/3">
-          <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
-          <ul class="text-slate-300">
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary">Beranda</a>
-            </li>
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary">Tentang Saya</a>
-            </li>
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary">Riwayat Pendidikan</a>
-            </li>
-            <!-- <li>
-                <a
-                  href="#"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >Blog</a
-                >
-              </li> -->
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-primary">Kontak</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
       <div class="w-full border-t border-slate-700 pt-10">
         <div class="mb-5 flex items-center justify-center">
           <!-- github -->
           <a href="https://github.com/leonardsoli27" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            class="mr-3 flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/30">
             <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
               <title>Git</title>
               <path
@@ -532,7 +668,7 @@
           </a>
           <!-- discord -->
           <a href="" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            class="mr-3 flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/30">
             <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
               <title>Discord</title>
               <path
@@ -541,7 +677,7 @@
           </a>
           <!-- instagram -->
           <a href="https://www.instagram.com/leonard_soli/" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            class="mr-3 flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/30">
             <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
               <title>Instagram</title>
               <path
@@ -550,7 +686,7 @@
           </a>
           <!-- twitter -->
           <a href="" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            class="mr-3 flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/30">
             <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
               <title>Twitter</title>
               <path
@@ -559,7 +695,7 @@
           </a>
           <!-- linkedIn -->
           <a href="https://www.linkedin.com/in/leonardsoli27" target="_blank"
-            class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+            class="mr-3 flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 text-slate-300 transition-all duration-300 hover:scale-110 hover:border-primary hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/30">
             <svg role="img" viewBox="0 0 24 24" class="fill-current" width="20" xmlns="http://www.w3.org/2000/svg">
               <title>LinkedIn</title>
               <path
@@ -568,7 +704,7 @@
           </a>
         </div>
         <p class="text-center text-xs font-medium text-slate-500">
-          Create By
+          Created By
           <a href="" class="font-bold text-primary">BlackScreen</a> with
           <a href="" class="font-bold text-primary">Tailwind CSS</a>.
         </p>
@@ -579,13 +715,63 @@
 
   <!-- Back to top start -->
   <a href="#home"
-    class="fixed bottom-4 right-4 z-[9999] hidden h-10 w-10 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse"
+    class="fixed bottom-6 right-6 z-[9999] hidden h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-all duration-300 hover:bg-gradient-to-tr hover:from-blue-600 hover:to-indigo-500 hover:-translate-y-1 hover:shadow-blue-500/30"
     id="to-top">
-    <span class="mt-2 block h-5 w-5 rotate-45 border-t-2 border-l-2"></span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="h-6 w-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+    </svg>
   </a>
   <!-- Back to top end -->
 
-  <script src=" dist/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <!-- Modal Project Start -->
+  <div id="project-modal" class="fixed inset-0 z-[99999] hidden items-center justify-center p-4">
+    <div id="modal-backdrop" class="absolute inset-0 bg-dark/60 backdrop-blur-sm transition-opacity duration-300 opacity-0"></div>
+    <div id="modal-container" class="relative w-full max-w-5xl scale-95 opacity-0 transition-all duration-300">
+      <div class="overflow-hidden rounded-[2.5rem] bg-white/90 dark:bg-slate-900/90 shadow-2xl backdrop-blur-xl border border-white/20 dark:border-slate-700/30">
+        <button onclick="closeProjectModal()" class="absolute top-6 right-6 z-50 flex h-10 w-10 items-center justify-center rounded-full bg-slate-200/50 dark:bg-slate-700/50 text-dark dark:text-white transition-all hover:bg-red-500 hover:text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <div class="flex flex-col lg:flex-row min-h-[400px]">
+          <!-- Col Beranda: Gambar -->
+          <div class="lg:w-1/2 p-4 flex items-center justify-center bg-slate-100/50 dark:bg-slate-800/50">
+            <div class="overflow-hidden aspect-video w-full shadow-lg">
+              <img id="modal-image" src="" alt="Project Preview" class="h-full w-full object-cover" />
+            </div>
+          </div>
+          <!-- Col Detail: Info -->
+          <div class="lg:w-1/2 p-8 lg:p-10 flex flex-col justify-center">
+            <h2 id="modal-title" class="text-3xl font-extrabold text-dark dark:text-white tracking-tight mb-4"></h2>
+            <div class="space-y-6">
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-primary mb-2">Deskripsi</h4>
+                <p id="modal-desc" class="text-secondary dark:text-slate-400 leading-relaxed"></p>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-2">Lokasi Pembangunan</h4>
+                <p id="modal-office" class="text-dark dark:text-slate-200 font-semibold"></p>
+              </div>
+              <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+                <div>
+                  <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Tech Stack</h4>
+                  <p id="modal-stack" class="text-sm text-dark dark:text-slate-300"></p>
+                </div>
+                <div>
+                  <h4 class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-2">Database</h4>
+                  <p id="modal-db" class="text-sm text-dark dark:text-slate-300"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Project End -->
+
+  <script src="dist/js/script.js"></script>
 </body>
 
 </html>
