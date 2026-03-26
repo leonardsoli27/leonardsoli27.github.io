@@ -3,9 +3,42 @@ const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("#nav-menu");
 const toTop = document.querySelector("#to-top");
 
+const navBackdrop = document.querySelector("#nav-backdrop");
+const closeMenu = document.querySelector("#close-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function openMenu() {
+  hamburger.classList.add("hamburger-active");
+  navMenu.classList.remove("translate-x-full");
+  navBackdrop.classList.remove("hidden");
+  setTimeout(() => {
+    navBackdrop.classList.add("opacity-100");
+  }, 10);
+}
+
+function exitMenu() {
+  hamburger.classList.remove("hamburger-active");
+  navMenu.classList.add("translate-x-full");
+  navBackdrop.classList.remove("opacity-100");
+  setTimeout(() => {
+    navBackdrop.classList.add("hidden");
+  }, 300);
+}
+
 hamburger.addEventListener("click", function () {
-  hamburger.classList.toggle("hamburger-active");
-  navMenu.classList.toggle("hidden");
+  if (navMenu.classList.contains("translate-x-full")) {
+    openMenu();
+  } else {
+    exitMenu();
+  }
+});
+
+closeMenu.addEventListener("click", exitMenu);
+navBackdrop.addEventListener("click", exitMenu);
+
+// Close menu when clicking links
+navLinks.forEach((link) => {
+  link.addEventListener("click", exitMenu);
 });
 
 // Navbar Fix & Back to Top
@@ -24,13 +57,6 @@ window.onscroll = function () {
   }
 };
 
-// Click outside hamburger
-window.addEventListener("click", function (e) {
-  if (e.target != hamburger && e.target != navMenu) {
-    hamburger.classList.remove("hamburger-active");
-    navMenu.classList.add("hidden");
-  }
-});
 
 // Dark Mode Toggle
 const themeToggleBtn = document.querySelector("#theme-toggle");
@@ -66,7 +92,6 @@ themeToggleBtn.addEventListener("click", function () {
 
 // ScrollSpy Navigation
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
   let current = "";
